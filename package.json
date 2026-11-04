@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:glob-compat": "node --test tests/minimatch-compat.test.mjs"
   },
   "dependencies": {
     "next": "16.4.5",
@@ -21,7 +22,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "minimatch": "file:./tools/wanpika-minimatch-compat-1.0.0.tgz",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "minimatch": "$minimatch"
   }
 }
